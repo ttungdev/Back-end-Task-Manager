@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Add CORS here
 app.use(
   cors({
-    origin: 'https://back-end-task-manager.vercel.app/',
+    origin: '*',
   }),
 );
 
