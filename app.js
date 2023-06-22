@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Add CORS here
 app.use(
   cors({
-    origin: '*',
+    origin: 'http://localhost:3000/profile',
   }),
 );
 
