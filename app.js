@@ -26,7 +26,7 @@ app.use(
   }),
 );
 
-app.get('/', (req, res) => {
+app.get('/profile', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/profile'); // Thay thế bằng domain của ứng dụng front-end của bạn trên Vercel
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
