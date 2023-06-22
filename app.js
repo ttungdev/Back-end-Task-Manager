@@ -22,9 +22,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Add CORS here
 app.use(
   cors({
-    origin: 'http://localhost:3000/profile',
+    origin: '*',
   }),
 );
+
+app.get('/', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/profile'); // Thay thế bằng domain của ứng dụng front-end của bạn trên Vercel
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Xử lý và trả về dữ liệu
+
+  res.send('Hello from the server!');
+});
+
 
 
 app.use('/', indexRouter);
